@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  jsoncli:
+    build: .
+    working_dir: /work
+    volumes:
+      - .:/work
+    entrypoint: ["python", "-m", "jsoncli.cli"]
