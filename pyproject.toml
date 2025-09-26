@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "json-parser-cli"
-version = "0.3.4"
+version = "0.3.5"
 description = "A simple JSON CLI tool"
 authors = [{name="Wezi Chipeta"}]
 readme = "README.md"
