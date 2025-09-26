@@ -3,8 +3,9 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "json-parser-cli-izw"
-version = "0.3.7"
+name = "json-parser-cli-izw"   # unique!
+version = "0.3.8"              # bump
+
 description = "A simple JSON CLI tool"
 authors = [{name="Wezi Chipeta"}]
 readme = "README.md"
