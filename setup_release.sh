@@ -1,8 +1,21 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# --- CONFIG --- #
-GITHUB_USER="izewdevlabs"   # 🔁 replace with your GitHub username/org
+# --- CONFIG DETECTION --- #
+# Try to get GitHub user from global config
+GITHUB_USER=$(git config --get github.user || true)
+
+if [[ -z "$GITHUB_USER" ]]; then
+  # fallback: try git user.name
+  GITHUB_USER=$(git config --get user.name || true)
+fi
+
+if [[ -z "$GITHUB_USER" ]]; then
+  echo "❌ Could not auto-detect GitHub username."
+  echo "👉 Please set it with: git config --global github.user <username>"
+  exit 1
+fi
+
 REPO="json-parser-cli"
 
 # --- SCRIPT --- #
