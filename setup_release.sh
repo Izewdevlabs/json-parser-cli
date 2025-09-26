@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # --- CONFIG --- #
-GITHUB_USER="your-username"   # 🔁 replace with your GitHub username/org
+GITHUB_USER="izewdevlabs"   # 🔁 replace with your GitHub username/org
 REPO="json-parser-cli"
 
 # --- SCRIPT --- #
